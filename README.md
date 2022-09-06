@@ -9,7 +9,7 @@ Currently only supports 32bit floating point raw IQ files
 ## Compile
 - First install [libpredict](https://github.com/la1k/libpredict)  
 - Compile 
-    - Sahred linkage with libpredict:
+    - Shared linkage with libpredict:
         ```bash
         cargo build --realease
         ```
