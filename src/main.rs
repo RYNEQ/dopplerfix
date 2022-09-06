@@ -8,7 +8,7 @@ use clap::Parser;
 
 
 #[derive(Parser, Debug)]
-#[clap(name = "Doppler Fix", author = "Ariyan Eghbal <ariyan.eghbal@gmail.com>", version = "0.1.0", about = "Fixes Dopller Shift on Satellite Signals", long_about = None)]
+#[clap(name = "Doppler Fix", author = "Ariyan Eghbal <ariyan.eghbal@gmail.com>", version = "0.1.1", about = "Fixes Dopller Shift on Satellite Signals", long_about = None)]
 struct Args {
     #[clap(short = 'v', long = "verbose")]
     verbose: bool,
@@ -24,7 +24,7 @@ struct Args {
     location: String,
     #[clap(long = "tle", help = "Satellite TLE")]
     tle: String,
-    #[clap(short = 't', long = "time", help = "Start time of observation (Y/m/d-H:M:S UTC)")]
+    #[clap(short = 't', long = "time", help = "Start time of observation (Unix timestamp UTC)")]
     time: i64,
 
 }
