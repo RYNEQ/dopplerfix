@@ -11,7 +11,7 @@ Currently only supports 32bit floating point raw IQ files
 - Compile 
     - Shared linkage with libpredict:
         ```bash
-        cargo build --realease
+        cargo build --release
         ```
     - Static linkage with libpredict:
         ```bash
