@@ -18,29 +18,20 @@ pub fn get_doppler_shift(tle: (&str,&str),latitude: f64, longitude: f64, altitud
         let mut orbit = predict_position::default(); //independent of an observer
         let mut observation = predict_observation::default() ; //relative to an observer
 
-        //let pred_time = predict_to_julian(std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().try_into().unwrap());
         let pred_time = predict_to_julian(time);
         predict_orbit(orbital_elements, &mut orbit, pred_time);
-        //println!("{:?} {:?}", orbit.latitude, orbit.longitude);
 
         
         let observer = predict_create_observer("LA1K".as_ptr() as *const i8, latitude/180.0*PI, longitude/180.0*PI, altitude);
         predict_observe_orbit(observer, &orbit, &mut observation);
-        //println!("{:?} {:?}", observation.azimuth, observation.elevation);
 
 
-        //let aos = predict_next_aos(observer, orbital_elements, pred_time);
-        //let time_to_aos = (aos.time - pred_time)*24.0*60.0;
-        //println!("Time to next AOS: {:?} minutes", time_to_aos);
-        //let downlink_frequency = 137.1e6;
-        //calculate doppler shift
         let doppler_shift = predict_doppler_shift(&observation, downlink_frequency);
 
         libc::free((*orbital_elements).ephemeris_data as *mut ::std::os::raw::c_void);
         libc::free(orbital_elements as *mut libc::c_void);
         libc::free(observer as *mut libc::c_void);
 
-        //println!("Doppler shift: {}", doppler_shift);
         doppler_shift
     }
 }
