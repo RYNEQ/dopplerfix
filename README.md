@@ -20,22 +20,22 @@ Currently only supports 32bit floating point raw IQ files
 
 ## Usage
 ```
-Doppler Fix 0.1.0
+dopplerfix 0.2.0
 Ariyan Eghbal <ariyan.eghbal@gmail.com>
 Fixes Dopller Shift on Satellite Signals
 
 USAGE:
-    dopplerfix [OPTIONS] --freq <FREQ> --rate <SAMPLE_RATE> --output <OUTPUT_FILE> --input <INPUT_FILE> --location <LOCATION> --tle <TLE> --time <TIME>
+    dopplerfix [OPTIONS] --freq <FREQ> --rate <SAMPLE_RATE> --location <LOCATION> --tle <TLE> --time <TIME>
 
 OPTIONS:
     -f, --freq <FREQ>             Frequency
     -h, --help                    Print help information
-    -i, --input <INPUT_FILE>      Input RAW IQ file path
+    -i, --input <INPUT_FILE>      Input RAW IQ file path or - for stdin [default: -]
     -l, --location <LOCATION>     Observer location (lat,lon,alt)
-    -o, --output <OUTPUT_FILE>    Output RAW IQ file path
+    -o, --output <OUTPUT_FILE>    Output RAW IQ file path or - for stdout [default: -]
     -r, --rate <SAMPLE_RATE>      Sample rate
-    -t, --time <TIME>             Start time of observation (Unix timestamp UTC)
-        --tle <TLE>               Satellite TLE
+    -t, --time <TIME>             Start time of observation (Unix timestamp or %Y%m%d-%H:%M:%S UTC)
+        --tle <TLE>               Satellite TLE (Two lines separated with any character)
     -v, --verbose                 
     -V, --version                 Print version information
 
