@@ -42,5 +42,5 @@ OPTIONS:
 ```
 
 before and after doppler fix for NOAA:  
-![Spectrum Before Shift](https://github.com/RYNEQ/dopplerfix/blob/master/img/before.png?raw=true)
-![Spectrum After Shift](https://github.com/RYNEQ/dopplerfix/blob/master/img/after.png?raw=true)
+<img alt="Spectrum Before Shift" width='49%' src="https://github.com/RYNEQ/dopplerfix/blob/master/img/before.png?raw=true"/>
+<img alt="Spectrum After Shift" width='49%' src="https://github.com/RYNEQ/dopplerfix/blob/master/img/after.png?raw=true"/>
