@@ -25,7 +25,7 @@ struct Args {
     location: String,
     #[clap(long = "tle", help = "Satellite TLE (Two lines separated with any character)")]
     tle: String,
-    #[clap(short = 't', long = "time", help = "Start time of observation (Unix timestamp or %Y%m%d-%H:%M:%S UTC)")]
+    #[clap(short = 't', long = "time", help = "Start time of observation (Unix timestamp or %Y%m%dT%H:%M:%S UTC)")]
     time: String,
 
 }
