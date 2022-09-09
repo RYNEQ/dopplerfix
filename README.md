@@ -34,7 +34,7 @@ OPTIONS:
     -l, --location <LOCATION>     Observer location (lat,lon,alt)
     -o, --output <OUTPUT_FILE>    Output RAW IQ file path or - for stdout [default: -]
     -r, --rate <SAMPLE_RATE>      Sample rate
-    -t, --time <TIME>             Start time of observation (Unix timestamp or %Y%m%d-%H:%M:%S UTC)
+    -t, --time <TIME>             Start time of observation (Unix timestamp or %Y%m%dT%H:%M:%S UTC)
         --tle <TLE>               Satellite TLE (Two lines separated with any character)
     -v, --verbose                 
     -V, --version                 Print version information
